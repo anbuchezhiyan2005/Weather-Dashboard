@@ -1,0 +1,6 @@
+{% if weather_data %}
+    <h1>{{ weather_data.city }}</h1>
+    <h2>{{ weather_data.temperature }}°C</h2>
+    <p>{{ weather_data.description }}</p>
+    <img src="https://www.weatherbit.io/static/img/icons/{{ weather_data.icon }}.png" alt="{{ weather_data.description }}">
+{% endif %}

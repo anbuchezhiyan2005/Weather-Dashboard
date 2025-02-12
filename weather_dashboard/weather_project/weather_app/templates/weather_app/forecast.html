@@ -1,0 +1,12 @@
+{% if forecast_data %}
+    <div class="forecast-container">
+        {% for day in forecast_data %}
+            <div class="forecast">
+                <h3>{{ day.date }}</h3>
+                <p>{{ day.temperature }}°C</p>
+                <p>{{ day.description }}</p>
+                <img src="https://www.weatherbit.io/static/img/icons/{{ day.icon }}.png" alt="{{ day.description }}">
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
